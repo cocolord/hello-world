@@ -73,26 +73,28 @@ bool isID(string s)
         return true;
     return false;
 }
-// inline void splitcolon(string s)
-// {
-//     if(s[s.size()-1]==";")
-//     {
-//         if(isNum(s))
-//         {
-//             out<<lineno<<":     ";
-//             out<<"NUM, val = ";
-//         }
-//         if(isID(s))
-//         {
-//             out<<lineno<<":     ";
-//             out<<"ID, name = ";
-//         }
-//         for(int i= 0;i<s.size()-1;i++)
-//             out<<s[i];
-//     }
-//     out<<endl;
-//     out<<s[i]<<endl;
-// }
+inline void splitcolon(string s,ostream &out,int &lineno)
+{
+    int i ;
+    if(s[s.size()-1] == ';')
+    {
+        
+        if(s[s.size()-2]>='0' && s[s.size()-2]<='9')
+        {
+            out<<lineno<<":     NUM, val = ";
+        }
+        else if(isID(s))
+        {
+            out<<lineno<<":     ";
+            out<<"ID, name = ";
+        }
+        for(i= 0;i<s.size()-1;i++)
+            out<<s[i];
+        out<<endl;
+        out<<lineno<<"      ;"<<endl;
+    
+    }
+}
 void ReadandWrite()
 {
     ifstream fin("test.tiny");  
@@ -106,10 +108,11 @@ void ReadandWrite()
 		int cur = processLine(buffer,s);
 		for(int i = 0;i<cur;i++)
 		{
-            // if(i==cur-1)
-            // {
-            //     splitcolon(buffer[i]);
-            // }
+            if(i==cur-1)
+            {
+                splitcolon(buffer[i],out,lineno);
+                break;
+            }
             flag = incomment(buffer[i]);
             if(buffer[i]==" "||buffer[i]=="\t"||buffer[i]=="\n")
                 continue;
