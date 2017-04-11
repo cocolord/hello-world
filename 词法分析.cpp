@@ -29,14 +29,18 @@ bool isSymbol(string s)
 }
 bool isNum(string s)
 {
-    for(int i = 0;i<s.size();i++)
+    int i;
+    for(i = 0;i<s.size();i++)
     {
-        if(isdigit(s[i]))
+        if(s[i]-'0'>=0 && s[i] - '0' <=9)
             ;
         else
-            return false;
+            break;
     }
-    return true;
+    if(i==s.size() && i!=0)
+        return true; 
+    else 
+        return false;
 }
 int processLine(string buffer[],string s)
 {
@@ -48,6 +52,7 @@ int processLine(string buffer[],string s)
 		cur++;
 		buffer[cur++] = temp;
 	}
+    cout<<cur<<endl;
 	return cur;
 }
 bool incomment(string s)
@@ -62,6 +67,13 @@ bool incomment(string s)
     }
     return false;
 }
+bool isID(string s)
+{
+    if(s[0]>='a'&&s[0]<='z')
+        return true;
+    return false;
+}
+
 void ReadandWrite()
 {
     ifstream fin("test.tiny");  
@@ -76,6 +88,8 @@ void ReadandWrite()
 		for(int i = 0;i<cur;i++)
 		{
             flag = incomment(buffer[i]);
+            if(buffer[i]==" "||buffer[i]=="\t"||buffer[i]=="\n")
+                continue;
             if(!flag && lookupReserved(buffer[i]))
             {
 			    out<<lineno<<":     ";
@@ -92,11 +106,13 @@ void ReadandWrite()
 			    out<<lineno<<":     ";
                 out<<"NUM, val = "<<buffer[i]<<'\n';
             }
-            else if(!flag)
+            else if(!flag && isID(buffer[i]))
             {
 			    out<<lineno<<":     ";
                 out<<"ID, name = "<<buffer[i]<<'\n';
             }
+            else
+                continue;
 		}
 		lineno++;
 	}
