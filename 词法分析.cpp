@@ -50,37 +50,49 @@ int processLine(string buffer[],string s)
 	}
 	return cur;
 }
-
+bool incomment(string s)
+{
+    if(s=="{")
+    {
+        return true;
+    }
+    else if(s=="}")
+    {
+        return false;
+    }
+    return false;
+}
 void ReadandWrite()
 {
     ifstream fin("test.tiny");  
     string s;
-    bool incomment = false;
 	int cur = 0;
+    bool flag = false;
     ofstream out("out.text",ios::app);
-    out <<"*****************************************\nTINY Lexical Analazer Result:\n*****************************************\n";
+    out <<"*****************************************\n    TINY Lexical Analazer Result:\n*****************************************\n";
 	while(getline(fin,s))
 	{
 		int cur = processLine(buffer,s);
 		for(int i = 0;i<cur;i++)
 		{
-            if(lookupReserved(buffer[i]))
+            flag = incomment(buffer[i]);
+            if(!flag && lookupReserved(buffer[i]))
             {
 			    out<<lineno<<":     ";
                 out<<"Reserved Words: ";
 		        out<<buffer[i]<<'\n';
             }
-            else if(isSymbol(buffer[i]))
+            else if(!flag && isSymbol(buffer[i]))
             {
 			    out<<lineno<<":     ";
 			    out<<buffer[i]<<'\n';
             }
-            else if(isNum(buffer[i]))
+            else if(!flag && isNum(buffer[i]))
             {
 			    out<<lineno<<":     ";
                 out<<"NUM, val = "<<buffer[i]<<'\n';
             }
-            else 
+            else if(!flag)
             {
 			    out<<lineno<<":     ";
                 out<<"ID, name = "<<buffer[i]<<'\n';
