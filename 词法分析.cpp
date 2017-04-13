@@ -1,7 +1,6 @@
 #include<iostream>
 #include<fstream>
 #include<sstream>
-#include<vector>
 #include<string.h>
 #include<string>
 using namespace std;
@@ -9,13 +8,11 @@ using namespace std;
 static int lineno = 1;
 
 const string Reserverd[20] = {"if","then","else","end","repeat","until","read","write"};
-vector <string> buffer;
+
 //string buffer[100];
 
 bool lookupReserved(string s)
 {
-    // ofstream out("error.txt",ios::app);
-    //     out<<s<<endl;
     for(int i = 0;i<8;i++)
     {
         if(s==Reserverd[i])
@@ -24,9 +21,9 @@ bool lookupReserved(string s)
     return false;
 }
 
-bool isSymbol(string s)  
+bool isSymbol(string s)
 {
-    if(s=="<"||s==">"||s=="="||s==":="||s=="*"||s=="/"||s==";"||s=="("||s==")")
+    if(s=="<"||s==">"||s=="="||s==":="||s=="*"||s=="/"||s==";"||s=="("||s==")"||s=="+"||s=="-")
         return true;
     return false;
 }
@@ -45,20 +42,20 @@ bool isNum(string s)
     else 
         return false;
 }
-int processLine(vector<string> buffer,string s)
+int processLine(string buffer[],string s)
 {
 	int cur = 0;
-	string temp;
+	string temp = "";
 	stringstream ss(s);
 	while(ss>>temp)
 	{
         if(!temp.empty() && temp[0]>=33 && temp[0]<=126)
         {
-            buffer.push_back(temp);
-         //   buffer[cur] = temp;
-            cur = cur + 1;
+            buffer[cur] = temp;
+            cur++;
         }
 	}
+
 	return cur;
 }
 bool incomment(string s)
@@ -79,7 +76,7 @@ bool isID(string s)
         return true;
     return false;
 }
-inline void splitcolon(string s,ofstream &out,int lineno)
+inline bool splitcolon(string s,ofstream &out,int lineno)
 {
     int i ;
     if(s[s.size()-1] == ';')
@@ -98,7 +95,9 @@ inline void splitcolon(string s,ofstream &out,int lineno)
             out<<s[i];
         out<<endl;
         out<<lineno<<"      ;"<<endl;
+        return true;
     }
+    return false;
 }
 void ReadandWrite()
 {
@@ -110,14 +109,16 @@ void ReadandWrite()
     out <<"*****************************************\n    TINY Lexical Analazer Result:\n*****************************************\n";
 	while(getline(fin,s))
 	{
+        string buffer[100];
 		int cur = processLine(buffer,s);
         //out<<s<<' '<<cur<<endl;
 		for(int i = 0;i<cur;i++)
 		{
+            //out<<"***test***"<<i<<buffer[i]<<endl;
             flag = incomment(buffer[i]);
-            if(i==cur-1)
+            if(i==cur-1 && splitcolon(buffer[i],out,lineno))
             {
-                splitcolon(buffer[i],out,lineno);
+                continue;
             }
             else if(!flag && lookupReserved(buffer[i]))
             {
@@ -143,7 +144,6 @@ void ReadandWrite()
             else
                 continue;
 		}
-        buffer.clear();
 		lineno++;
 	}
 }
