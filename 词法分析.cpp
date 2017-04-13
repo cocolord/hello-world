@@ -89,17 +89,33 @@ inline bool splitcolon(string s,ofstream &out,int lineno)
 }
 
 //last one
-bool incomment(string s,ofstream &out)
+//buffer 储存词素
+//fin读文件对象，使用函数getline
+//假设'}'存在一行末尾
+//s 是一整行
+//i 是当前指向的词，判断是否从该词开始注释
+//注释'{''}'不会和别的任何字符挨着；
+
+bool incomment(int &i,string s,ofstream &out,string buffer[],ifstream &fin)
 {
-    if(s=="{")
-    {
-        return true;
-    }
-    else if(s=="}")
-    {
+    bool flag = false;
+    if(buffer[i][0]!='{')   
         return false;
+    else
+    {
+        if(s[s.size()-1]=='}')
+            return true;
+        else
+        {
+            string tmp;
+            while(getline(fin,tmp))
+            {     
+                if(tmp[tmp.size()-1]=='}')
+                    return true;
+            }
+        }
     }
-    return false;
+    return flag;
 }
 
 void ReadandWrite()
@@ -117,7 +133,9 @@ void ReadandWrite()
 		for(int i = 0;i<cur;i++)
 		{
             //out<<"***test***"<<i<<buffer[i]<<endl;
-            flag = incomment(buffer[i],out);
+            //如果是注释，推出再读一行
+            if(incomment(i,s,out,buffer,fin))
+                break;
             if(i==cur-1 && splitcolon(buffer[i],out,lineno))
             {
                 continue;
