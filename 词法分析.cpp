@@ -58,18 +58,6 @@ int processLine(string buffer[],string s)
 
 	return cur;
 }
-bool incomment(string s)
-{
-    if(s=="{")
-    {
-        return true;
-    }
-    else if(s=="}")
-    {
-        return false;
-    }
-    return false;
-}
 bool isID(string s)
 {
     if(s[0]>='a'&&s[0]<='z')
@@ -99,6 +87,21 @@ inline bool splitcolon(string s,ofstream &out,int lineno)
     }
     return false;
 }
+
+//last one
+bool incomment(string s,ofstream &out)
+{
+    if(s=="{")
+    {
+        return true;
+    }
+    else if(s=="}")
+    {
+        return false;
+    }
+    return false;
+}
+
 void ReadandWrite()
 {
     ifstream fin("test.tiny");  
@@ -111,11 +114,10 @@ void ReadandWrite()
 	{
         string buffer[100];
 		int cur = processLine(buffer,s);
-        //out<<s<<' '<<cur<<endl;
 		for(int i = 0;i<cur;i++)
 		{
             //out<<"***test***"<<i<<buffer[i]<<endl;
-            flag = incomment(buffer[i]);
+            flag = incomment(buffer[i],out);
             if(i==cur-1 && splitcolon(buffer[i],out,lineno))
             {
                 continue;
@@ -146,6 +148,7 @@ void ReadandWrite()
 		}
 		lineno++;
 	}
+    out<<"EOF"<<endl;
 }
 
 
