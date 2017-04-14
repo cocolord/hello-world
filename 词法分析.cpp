@@ -110,6 +110,7 @@ bool incomment(int &i,string s,ofstream &out,string buffer[],ifstream &fin)
             string tmp;
             while(getline(fin,tmp))
             {     
+                lineno++;
                 if(tmp[tmp.size()-1]=='}')
                     return true;
             }
