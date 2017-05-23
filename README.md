@@ -1,4 +1,1 @@
-#include<iostream>
-int main(){
-  std::cout<<"Hello"<<std::endl;
-}
+* 一个储存临时代码的仓库 *
