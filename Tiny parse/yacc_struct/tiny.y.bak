@@ -1,0 +1,158 @@
+%{
+#include "y.tab.h"
+#include "scan.h"
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+//定义语法树节点
+typedef enum {StmtK,ExpK} NodeKind;
+typedef enum {IfK,RepeatK,AssignK,ReadK,WriteK} StmtKind;
+typedef enum {OpK,ConstK,IdK} ExpKind;
+typedef enum {Void,Integer,Boolean} ExpType;
+
+#define MAXCHILDREN 3
+
+typedef struct treeNode
+   { struct treeNode * child[MAXCHILDREN];
+     struct treeNode * sibling;
+     int lineno;
+     NodeKind nodekind;
+     union { StmtKind stmt; ExpKind exp;} kind;
+     union { TokenType op;
+             int val;
+             char * name; } attr;
+     ExpType type; 
+   } TreeNode;
+
+#define YYSTYPE TreeNode *
+
+//函数声明
+TreeNode * newStmtNode(StmtKind);
+TreeNode * newExpNode(ExpKind);
+char * copyString( char * );
+TreeNode * parse(void);
+void printTree( TreeNode * );
+
+//全局变量声明
+int lineno;
+
+char * savedName; 
+int savedLineNo;  
+TreeNode * savedTree;
+%}
+
+%token IF THEN ELSE END REPEAT UNTIL READ WRITE
+%token ID NUM 
+%token ASSIGN EQ LT PLUS MINUS TIMES OVER LPAREN RPAREN SEMI
+%token ERROR 
+
+%% /* Tiny 语法规则 */
+
+/* 骨架语法规则将所有的token进行遍历,请删除下面的语法添加正确的语法规则 */
+program     : token_seq
+                 { savedTree = $1;} 
+            ;
+token_seq   : token_seq token	    {/*do nothing*/}
+            | token               {/*do nothing*/}
+            ;
+token       : IF     		    {/*do nothing*/}
+            | THEN                {/*do nothing*/}
+            | ELSE                {/*do nothing*/}
+            | END                 {/*do nothing*/}
+            | REPEAT              {/*do nothing*/}
+		| UNTIL               {/*do nothing*/}
+		| READ                {/*do nothing*/}
+		| WRITE               {/*do nothing*/}
+		| ID                  {/*do nothing*/}
+		| NUM                 {/*do nothing*/}
+		| ASSIGN              {/*do nothing*/}
+		| EQ                  {/*do nothing*/}
+		| LT                  {/*do nothing*/}
+		| PLUS                {/*do nothing*/}
+		| MINUS               {/*do nothing*/}
+		| TIMES               {/*do nothing*/}
+		| OVER                {/*do nothing*/}
+		| LPAREN              {/*do nothing*/}
+		| RPAREN              {/*do nothing*/}
+		| SEMI                {/*do nothing*/}
+		| ERROR               {/*do nothing*/}
+            ;
+%%
+
+int yyerror(char * message)
+{ printf("Syntax error at line %d: %s\n",lineno,message);
+  printf("Current token: ");
+  printToken(yychar,tokenString);
+  return 0;
+}
+
+static int yylex(void)
+{ return getToken(); }
+
+TreeNode * parse(void)
+{ yyparse();
+  return savedTree;
+}
+
+TreeNode * newStmtNode(StmtKind kind)
+{ TreeNode * t = (TreeNode *) malloc(sizeof(TreeNode));
+  int i;
+  if (t==NULL)
+    printf("Out of memory error at line %d\n",lineno);
+  else {
+    for (i=0;i<MAXCHILDREN;i++) t->child[i] = NULL;
+    t->sibling = NULL;
+    t->nodekind = StmtK;
+    t->kind.stmt = kind;
+    t->lineno = lineno;
+  }
+  return t;
+}
+
+TreeNode * newExpNode(ExpKind kind)
+{ TreeNode * t = (TreeNode *) malloc(sizeof(TreeNode));
+  int i;
+  if (t==NULL)
+    printf("Out of memory error at line %d\n",lineno);
+  else {
+    for (i=0;i<MAXCHILDREN;i++) t->child[i] = NULL;
+    t->sibling = NULL;
+    t->nodekind = ExpK;
+    t->kind.exp = kind;
+    t->lineno = lineno;
+    t->type = Void;
+  }
+  return t;
+}
+
+char * copyString(char * s)
+{ int n;
+  char * t;
+  if (s==NULL) return NULL;
+  n = strlen(s)+1;
+  t = malloc(n);
+  if (t==NULL)
+    printf("Out of memory error at line %d\n",lineno);
+  else strcpy(t,s);
+  return t;
+}
+
+void printTree( TreeNode * tree )
+{
+        /* insert your code */
+	printf("please print tree here\n"); 
+}
+
+main(int argc, char * argv[])
+{
+	lineno = 0;
+	TreeNode * syntaxTree;
+	syntaxTree = parse();
+	printTree(syntaxTree);
+	return 0;
+}
+
+
