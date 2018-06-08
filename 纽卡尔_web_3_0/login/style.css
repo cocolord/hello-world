@@ -1,0 +1,207 @@
+*{margin:0;padding:0;list-style:none;}
+body {
+    font-family: '微软雅黑',sans-serif;
+    line-height: 1.428571429;
+    font-size: 16px;
+    background: #2c394a;
+    position: absolute;
+    right: 0;
+    left: 0;
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    font-size: 1em;
+    background-size: cover;
+    color: #FFF;
+}
+.unauth-content {
+    margin: 0 auto;
+    height: 100%;
+    overflow: auto;
+    width: 100%;
+}
+.unauth-content .unauth-form {
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+.unauth-content .unauth-form .background.large {
+    background-image: url(../images/Login_bg_Lines_01.png);
+}
+
+.unauth-content .unauth-form .background {
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    height: 1168px;
+    position: absolute;
+    top: -1168px;
+    width: 100%;
+}
+.unauth-content .logo {
+    width: 220px;
+}
+
+.unauth-content img {
+    position: relative;
+}
+
+img {
+    vertical-align: middle;
+}
+img {
+    border: 0;
+}
+.unauth-content .unauth-form form {
+    margin: 0 auto;
+    max-width: 240px;
+}
+.unauth-content .unauth-form .alert-message {
+    min-height: 49px;
+}
+.unauth-content .unauth-form .mm-input {
+    text-align: left;
+    margin-bottom: 15px;
+}
+.mm-input {
+    height: 26px;
+    border-radius: 14px;
+    border: 1px solid transparent;
+    background-color: #2b303b;
+    color: #a7afbe;
+    position: relative;
+    margin: 0 auto;
+}
+.mm-input {
+    position: relative;
+    border: 2px solid #38393f;
+    height: 38px;
+    line-height: 38px;
+    color: #7a7b7f;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    font-size: 14px;
+}
+.unauth-content .unauth-form .mm-input.password-row {
+    text-align: left;
+    margin-bottom: 10px;
+}
+.unauth-content .unauth-form .forget {
+    float: right;
+    font-size: 14px;
+    margin-bottom: 15px;
+    position: relative;
+    text-align: right;
+}
+.unauth-content .unauth-form .forget a {
+    color: #7b879d;
+    text-decoration: none;
+}
+a, a:visited, a:active, a:hover {
+    color: #5cc2d6;
+}
+.unauth-content .unauth-form .button.primary {
+    min-width: 120px;
+    margin: 50px auto 0 auto;
+    position: relative;
+}
+
+ button.primary {
+    background-color: #0586a0;
+    color: #f0f2f4;
+}
+button.primary {
+    background-color: #0586a0;
+    color: #f0f2f4;
+}
+.button.primary {
+    background-color: #2ea1b8;
+    color: #f0f2f4;
+}
+button {
+    display: inline-block;
+    background-color: #4c5567;
+    border:none;
+    color: #a7afbe;
+    padding: 0 15px;
+    margin: 0;
+    outline: none;
+    border-radius: 13px;
+    white-space: nowrap;
+    height: 38px;
+    width:100%;
+    line-height: 38px;
+    border-radius:4px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 0;
+}
+button.button {
+    border: none;
+}
+.button {
+    display: inline-block;
+    background-color: #4c5567;
+    color: #a7afbe;
+    padding: 0 15px;
+    margin: 0;
+    outline: none;
+    border-radius: 13px;
+    white-space: nowrap;
+    height: 26px;
+    min-width: 34px;
+    line-height: 26px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 0;
+}
+.unauth-content .unauth-form .shadow {
+    background-image: url(../images/shadow.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 35px;
+    margin: 60px auto 0 auto;
+    width: 100%;
+}
+.mm-input input {
+    height: 100%;
+    color: #a7afbe;
+    position: absolute;
+    border-radius: 10px;
+    outline:none;
+}
+.mm-input input {
+    padding-left: 15px;
+    width: 221px;
+    height: 38px;
+    line-height: initial;
+    color: #7a7b7f;
+    border: none;
+    background: none;
+    font-style: normal;
+    outline:none;
+}
+.unauth-content p {
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 0;
+    text-align: center;
+    color: #7b879d;
+}

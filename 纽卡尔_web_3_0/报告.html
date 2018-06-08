@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://www.drbrain.net/index.php/Index/reports.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>报告</title>
+	<!--<base href=".">--><base href=".">
+	
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+	<meta http-equiv="expires" content="0">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, height=device-height,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+   <link rel="icon" type="image/png" sizes="16x16" href="https://www.drbrain.net/Public/newlogin/images/favicon.png">
+    <link rel="stylesheet" href="./报告_files/common.css">
+    <link rel="stylesheet" href="./报告_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./报告_files/index2.css">
+    <script type="text/javascript" src="./报告_files/jquery.min.js"></script>
+</head>
+<body style="">
+    <script type="text/javascript">
+var left = 0;
+jQuery(document).ready(function () {
+    var qcloud = {};
+    $('[_t_nav]').hover(function () {
+        var l = $(this).offset().left;
+        var _nav = $(this).attr('_t_nav');
+       if(!$(this).prop('id')){
+            left = l;
+        }
+        clearTimeout(qcloud[_nav + '_timer']);
+        qcloud[_nav + '_timer'] = setTimeout(function () {
+            $('[_t_nav]').each(function () {
+                $(this)[_nav == $(this).attr('_t_nav') ? 'addClass' : 'removeClass']('nav-up-selected');
+            });
+             $('#' + _nav).children('ul').css({position: "absolute",'left':left,'z-index':2});
+            $('#' + _nav).stop(true, true).slideDown(200);
+        }, 150);
+    }, function () {
+        var _nav = $(this).attr('_t_nav');
+        clearTimeout(qcloud[_nav + '_timer']);
+        qcloud[_nav + '_timer'] = setTimeout(function () {
+            $('[_t_nav]').removeClass('nav-up-selected');
+            $('#' + _nav).stop(true, true).slideUp(200);
+        }, 150);
+    });
+});
+    </script>
+
+<div class="header top" id="header">
+    <div class="container-fluid" id="narBar">
+        <div class="navbar-header">
+            <a class="navbar-brand logo" href="index.html" style="padding: 0px; height: 0px; margin-top: 13px; margin-left: 12px; ">
+                <img src="./files/logo.png" style="width: 30px;">
+            </a>
+        </div>
+        <div class="navbar-collapse collapse" style="margin-top: 0px; height: 70px; ">
+            <ul class="nav navbar-nav pull-right">
+                <li><a href="index.html" class="nav_dian">首页</a></li>
+                <li class="" _t_nav="BrainStstem" style="cursor: pointer;"><a href="javascript:void(0)">纽卡尔智能诊疗系统</a></li>
+                <li><a href="login.html">登录云平台</a></li>
+            </ul>
+        </div>
+    </div>
+  <div class="header2" id="BrainStstem" style="display: none;" _t_nav="BrainStstem">
+         <ul class="nav navbar-nav pull-right xialadaohang">
+            <li><a href="./工作流程.html">工作流程</a>
+            </li>
+            <li><a href="报告.html">报告</a>
+            </li>
+            <!--<li><a href="https://www.drbrain.net/index.php/Index/clinicalApp.html">临床应用</a>-->
+            <!--</li>-->
+            <li><a href="./qa.html">Q&amp;A</a>
+            </li>
+            <li style="width: 272px;"></li>
+        </ul>
+  </div>
+
+
+
+</div>
+  <div class="header2" id="news" style="display: none;" _t_nav="news">
+         <ul class="nav navbar-nav pull-right xialadaohang">
+            <li><a href="https://www.drbrain.net/index.php/Index/event.html">公司大事件</a>
+            </li>
+            <li><a href="https://www.drbrain.net/index.php/Index/news.html">新闻动态</a>
+            </li>
+            <li style="width: 276px;"></li>
+        </ul>
+  </div>
+    <div class="header2" id="aboutUs" style="display: none;" _t_nav="aboutUs">
+        <ul class="nav navbar-nav pull-right xialadaohang">
+            <li><a href="https://www.drbrain.net/index.php/Index/about.html">关于我们</a>
+            </li>
+            <li><a href="https://www.drbrain.net/index.php/Applyfortrial/index.html">申请试用</a>
+            </li>
+            <li style="width: 276px;"></li>
+        </ul>
+    </div>
+
+
+
+    <link rel="stylesheet" href="./报告_files/index.css">
+<!--     <div class="section_bigbanner" style="background-image: url('/Public/newlogin/pages/join/images/reports.jpg')">
+        <div class="container section_bigbanner_container">
+            <div class="banner-text-height" style="height: 50px;">
+            </div>
+        </div>
+    </div> -->
+       <style>
+    .warp-content{
+        background: -webkit-linear-gradient(#E0EAF7, #ffffff); /* Safari 5.1 - 6.0 */
+        background: -o-linear-gradient(#E0EAF7, #ffffff); /* Opera 11.1 - 12.0 */
+        background: -moz-linear-gradient(#E0EAF7, #ffffff); /* Firefox 3.6 - 15 */
+        background: linear-gradient(#E0EAF7, #ffffff); /* 标准的语法 */
+    }
+    img{width: 100%;max-width:100%;border:none;vertical-align:middle;}
+    .warp-content .row a{display:block;text-decoration:none;margin: 0 0 10px;color: #333;font-size:1.1rem;}
+    @media (min-width: 2561px){
+        .container {
+            width: 1870px;
+        }
+    }
+    @media (min-width: 1920px) and (max-width:2560px){
+        .container {
+            width: 1570px;
+        }
+    }
+    @media (min-width: 1440px) and (max-width:1920px){
+        .container {
+            width: 1370px;
+        }
+    }
+    @media (min-width: 1200px) and (max-width:1440px){
+        .container {
+            width: 1170px;
+        }
+        .row{padding-top:1% !important;}
+    }
+    @media (min-width: 992px) and (max-width:1200px){
+        .container {
+            width: 970px;
+        }
+        .row{padding-top:0% !important;}
+    }
+    @media (min-width: 768px) and (max-width:992px){
+        .container {
+            width: 750px;
+        }
+        .row{padding-top:0% !important;}
+    }
+    </style>
+    <div class="warp-content" style="min-height:93vh;padding-top:6.5%;">
+        <div class="container">
+            <div class="row" style="vertical-align:middle;padding-top:3%;">
+                <div class="col-lg-6 col-sm-6">
+                    <img src="./报告_files/report.png" alt="" style="padding:0px;">
+                </div>
+                 <div class="col-lg-5 col-sm-5 col-lg-offset-1 col-sm-offset-1" style="margin-top:5%;padding-left:5%;">
+                    <div class="main-title module-title-size contact-content-title" style="font-size:3rem;color:#333;font-weight:100;">报告</div>
+                    <div style="height:50px;"></div>
+                    <a style="font-size:18px;color:#888;padding-bottom:3px;">–脑结构Overview</a>
+                    <a style="font-size:18px;color:#888;padding-bottom:3px;">–大脑萎缩 （海马，侧脑室，颞叶体积）</a>
+                    <a style="font-size:18px;color:#888;padding-bottom:3px;">–大脑皮层厚度报告</a>
+                    <a style="font-size:18px;color:#888;padding-bottom:3px;">–基底节区体积报告</a>
+                    <a style="font-size:18px;color:#888;padding-bottom:3px;">–海马体积报告</a>
+                    <a style="font-size:18px;color:#888;padding-bottom:3px;">–脑室系统形态学报告</a>
+                    <a style="font-size:18px;color:#888;padding-bottom:3px;">–脑白质报告</a>
+                    <a style="font-size:18px;color:#888;padding-bottom:3px;">–PET 大脑形态学报告</a>
+                    <a style="font-size:18px;color:#888;padding-bottom:3px;">–胼胝体体积测量报告</a>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- <div style='height:60px;'></div> -->
+<div class="footer">
+    <div class="center" style="  background: url(/Public/newlogin/Public/Themes/Brain/Images/footer2.png)30% 32px no-repeat; background-color:#2c394a ; width: 100%; height: 104px;">
+  
+      <p style="text-align: center; font-size: 16px; color: white; padding-top: 60px; line-height: 0px; font-weight: normal;">Copyright © NEUROQER. 2017. All Rights Reserved</p>
+        <!--<img src="Public/Themes/Brain/Images/footer.png">-->
+    </a></div><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011002002232" style="color: #ffffff">
+</a></div><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011002002232" style="color: #ffffff">
+
+    <!--
+        <script type="application/javascript">
+            $(document).ready(function () {
+            scrolltotop.controlHTML = "<div class='go-top'><img src='images/go-top.svg'/></div>";
+            scrolltotop.init()
+            })
+        </script>
+    -->
+
+        <script type="text/javascript">
+            var left = 0;
+            jQuery(document).ready(function () {
+                var qcloud = {};
+                $('[_t_nav]').hover(function () {
+                    var l = $(this).offset().left;
+                    var _nav = $(this).attr('_t_nav');
+                    if(!$(this).prop('id')){
+                        left = l;
+                    }
+                    clearTimeout(qcloud[_nav + '_timer']);
+                    qcloud[_nav + '_timer'] = setTimeout(function () {
+                        $('[_t_nav]').each(function () {
+                            $(this)[_nav == $(this).attr('_t_nav') ? 'addClass' : 'removeClass']('nav-up-selected');
+                        });
+                        $('#' + _nav).children('ul').css({position: "absolute",'left':left,'z-index':2});
+                        $('#' + _nav).stop(true, true).slideDown(200);
+                    }, 150);
+                }, function () {
+                    var _nav = $(this).attr('_t_nav');
+                    clearTimeout(qcloud[_nav + '_timer']);
+                    qcloud[_nav + '_timer'] = setTimeout(function () {
+                        $('[_t_nav]').removeClass('nav-up-selected');
+                        $('#' + _nav).stop(true, true).slideUp(200);
+                    }, 150);
+                });
+            });
+
+
+</a></body></html>

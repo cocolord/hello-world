@@ -1,0 +1,208 @@
+a:active, a:hover {
+	outline: 0 none;
+	text-decoration: none
+}
+.footer {
+	background: #444;
+	font-size: 14px;
+    font-size:.875rem;
+	/*padding-top: 1.5rem;*/
+	/*padding-bottom: 1.5rem;*/
+	color: #fff
+}
+.footer_col, .footer_col1, .footer_col2 {
+	color: #f6f3f6;
+	text-align: center;
+padding-top:.3rem;
+padding-bottom:.3rem
+}
+.footer_col1, .footer_col2 {
+	float: left;
+	width: 50%
+}
+.bar_code {
+	padding-top: 1rem
+}
+.copyright, .copyright a {
+	background: #444;
+font-size:.675rem;
+	text-align: center;
+	color: #ccc!important;
+	padding-bottom: 1.3rem
+}
+.copyright span {
+	white-space: nowrap
+}
+.footer_title, .footer_title a {
+	color: #ccc!important;
+font-size:.875rem;
+padding-bottom:.5rem
+}
+.footer_image {
+	width: 1.4rem;
+	height: 1.4rem
+}
+.footer_telphone {
+	color: #ccc!important;
+	font-size: 18px;
+	font-size: 1.125rem;
+padding-bottom:.5rem
+}
+.weibo {
+	text-align: center
+}
+.weibo .inner {
+	display: inline-block;
+	overflow: hidden
+}
+.weibo .footer_col {
+	float: left;
+	margin-left: 40px
+}
+.weibo .footer_col:first-child {
+	margin-left: 0
+}
+.footer .row>div {
+	display: inline-block;
+	vertical-align: middle;
+	float: none
+}
+.weibo-text {
+	margin-top: 10px
+}
+.footer_small {
+	color: #ccc!important;
+	font-size: 12px;
+font-size:.75rem;
+	font-weight: 700;
+padding-bottom:.5rem
+}
+.vertical_line {
+	height: 8rem;
+width:.08rem;
+	background-color: #fff;
+	margin-left: auto;
+	margin-right: auto
+}
+.main-content {
+	float: left;
+	font-size: 12px;
+font-size:.75rem;
+	list-style: outside none none;
+	padding: 17px 15px 0;
+	margin-left: 24px
+}
+@media (max-width:767px) {
+.main-content {
+	margin-left: 0
+}
+}
+.main-content>li {
+	float: left
+}
+.main-content a {
+	color: #333
+}
+.main-content a.active, .main-content a:hover {
+	color: #00889e
+}
+.main-content li a:before {
+	content: "|";
+	margin: 0 8px
+}
+.main-content li:first-child a:before {
+	content: "";
+	margin: 0
+}
+.index-header {
+	margin: 0!important;
+	border: 0!important;
+	background-color: #fff!important;
+	border-bottom-width: 0!important
+}
+.toggle_button {
+	height: 2.125rem!important;
+	border: none!important
+}
+.toggle_button_img {
+	width: 1.875rem;
+	height: 1.875rem
+}
+.title_logo_link {
+	padding: 5px 15px
+}
+.title_logo_link>img {
+	height: 100%
+}
+.title_link {
+font-size:.875rem!important;
+	color: #003b6f!important
+}
+.title_link:hover {
+	background: #eee!important
+}
+.active>.title_link, .active>.title_link:focus, .active>.title_link:hover {
+	color: #003b6f!important;
+	background-color: #eee!important
+}
+.banner-text-height {
+	height: 300px;
+	line-height: 280px;
+	line-height: 9.375rem
+}
+@media (max-width:767px) {
+.banner-text-height {
+	height: 130px;
+	line-height: 130px;
+	line-height: 8.125rem
+}
+}
+.navbar-toggle {
+	padding: 0;
+	margin: 4px 30px 0 0
+}
+.navbar-default .navbar-toggle:hover {
+	background-color: transparent
+}
+.morph-main-menu-button-wrapper {
+	cursor: pointer;
+	height: 30px;
+	-webkit-transition: opacity .2s ease .6s, top 0s ease .6s;
+	transition: opacity .2s ease .6s, top 0s ease .6s;
+	width: 24px;
+	z-index: 1
+}
+.morph-main-menu-button {
+	padding: 6px 11px 10px 8px;
+	-webkit-transition: all .6s ease 0s;
+	transition: all .6s ease 0s
+}
+.morph-main-menu-button:after, .morph-main-menu-button:before, .morph-main-menu-button div.morph-main-menu-button-middle:before {
+	background-color: #143462;
+	content: "";
+	display: block;
+	height: 2px;
+	margin: 6px 0;
+	outline: 1px solid transparent;
+	-webkit-transition: all .5s ease 0s;
+	transition: all .5s ease 0s;
+	width: 24px
+}
+.morph-main-menu-button:hover:after, .morph-main-menu-button:hover:before, .morph-main-menu-button:hover div.morph-main-menu-button-middle:before {
+	background-color: #2563ae
+}
+.morph-menu-active .morph-main-menu-button:after {
+	margin: -1px 0 0;
+	-webkit-transform: translateY(-4px) rotate(-45deg);
+	transform: translateY(-4px) rotate(-45deg)
+}
+.morph-menu-active .morph-main-menu-button:before {
+	margin: 2px 0 0;
+	-webkit-transform: translateY(11px) rotate(45deg);
+	transform: translateY(11px) rotate(45deg)
+}
+.morph-menu-active div.morph-main-menu-button-middle:before {
+	opacity: 0;
+	-webkit-transition: all .3s ease 0s;
+	transition: all .3s ease 0s
+}

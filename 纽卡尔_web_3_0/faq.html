@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<head>
+    <title>FAQ</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+
+    <link rel="stylesheet" href="./qa/common.css">
+    <!-- <link rel="stylesheet" href="./qa/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="./qa/index2.css"> -->
+    <!-- <link href="./qa/bootstrap.css" rel="stylesheet"> -->
+    <link href="./qa/main.css" rel="stylesheet">
+
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+            function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //for-mobile-apps -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- js -->
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <!-- //js -->
+    <script src="./qa/main.js"></script> 
+    <link href='https://fonts.googleapis.com/css?family=Viga' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <script src="js/responsiveslides.min.js"></script>
+    <!-- start-smoth-scrolling -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event){		
+                event.preventDefault();
+                $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+            });
+        });
+    </script>
+    <!-- start-smoth-scrolling -->
+    
+    </head>
+<!-- <body style=""> -->
+
+	<div class="header">
+		<div class="container">
+			<div class="logo">
+                    <h1><a href="index.html">纽卡尔<span>专业的诊疗平台</span></a></h1>
+			</div>
+			<div class="header-left">
+				<nav class="navbar navbar-default">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+					  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					  </button>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+						<div class="header-right search">
+							<form action="#" method="post">
+								<input type="search" name="Search" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required="">
+								<input type="submit" value=" ">
+							</form>
+						</div>
+						<nav class="link-effect-9" id="link-effect-9">
+                            <ul class="nav navbar-nav">
+                                    <li class="active"><a class="hvr-bounce-to-bottom" href="index.html">主页</a></li>
+                                    <!-- <li><a href="" class="hvr-bounce-to-bottom">云服务</a></li> -->
+                                    <li><a href="workflow.html" class="hvr-bounce-to-bottom">工作流程</a></li>
+                                    <!-- <li><a href="gallery.html" class="hvr-bounce-to-bottom">报告</a></li> -->
+                                    <li><a href="faq.html" class="hvr-bounce-to-bottom">FAQ</a></li>
+                                    <!--<li><a href="contact.html" class="hvr-bounce-to-bottom">Contact</a></li>-->
+                                    <li><a href="report.html" class="hvr-bounce-to-bottom">详细报告单</a></li>
+                                    <li><a href="login.html" class="hvr-bounce-to-bottom" align = 'right'>登录云平台</a></li>
+                            </ul>
+						</nav>
+					</div>
+					<!-- /.navbar-collapse -->
+				</nav>
+			</div>
+		</div>
+	</div>
+<!-- //header -->
+<!-- banner -->
+<div class="banner page_head">
+	
+</div>
+<!-- //banner -->
+</div>
+
+<script type="text/javascript">
+    var left = 0;
+    jQuery(document).ready(function () {
+        var qcloud = {};
+        $('[_t_nav]').hover(function () {
+            var l = $(this).offset().left;
+            var _nav = $(this).attr('_t_nav');
+           if(!$(this).prop('id')){
+                left = l;
+            }
+            clearTimeout(qcloud[_nav + '_timer']);
+            qcloud[_nav + '_timer'] = setTimeout(function () {
+                $('[_t_nav]').each(function () {
+                    $(this)[_nav == $(this).attr('_t_nav') ? 'addClass' : 'removeClass']('nav-up-selected');
+                });
+                 $('#' + _nav).children('ul').css({position: "absolute",'left':left,'z-index':2});
+                $('#' + _nav).stop(true, true).slideDown(200);
+            }, 150);
+        }, function () {
+            var _nav = $(this).attr('_t_nav');
+            clearTimeout(qcloud[_nav + '_timer']);
+            qcloud[_nav + '_timer'] = setTimeout(function () {
+                $('[_t_nav]').removeClass('nav-up-selected');
+                $('#' + _nav).stop(true, true).slideUp(200);
+            }, 150);
+        });
+    });
+    </script>
+<link rel="stylesheet" href="./qa/index.css">
+<!-- <style type="text/css">
+.normal-content .current{
+  font-size: 1.1rem;
+  line-height: 2.6rem;  
+}
+.warp-content{
+        min-height:93vh; 
+        background: -webkit-linear-gradient(#E0EAF7, #ffffff);
+        background: -o-linear-gradient(#E0EAF7, #ffffff); 
+        background: -moz-linear-gradient(#E0EAF7, #ffffff); 
+        background: linear-gradient(#E0EAF7, #ffffff);
+}
+</style> -->
+<div class="warp-content">
+    <div class="container">
+        <div class="row">
+            <div class="normal-content">
+                
+                <div style="text-align: left">
+                    
+                   <!-- sub-menu --><!-- 内容 -->
+<div class="container support-content">
+  <div class="row">
+    <div class="col-md-12">
+      <aside id="support" class="accordion">
+        <h1 class="question">纽卡尔智能诊疗系统给医生提供什么？</h1>
+        <div class="accordion-content answer" style="display: none;">
+          <p style="line-height: 30px;font-size: 17px;">1.  大脑精确的体积测量参数：纽卡尔智能诊疗系统自动分析3D MR图像，并提供准确，一致和可重复的脑结构数据，包括海马体积，侧脑室体积，皮层厚度，基底节区及胼胝体体积，并将其与年龄和性别匹配的参考数据进行比较。<br>
+                    2.  基于先进的AI算法，预测病人患有阿尔茨海默症，帕金森病等疾病的危险度。</p>
+        </div>
+        <span class="gap10"></span>
+        <h1 class="question">纽卡尔智能诊疗系统的临床医用</h1>
+        <div class="accordion-content answer" style="display: none;">
+          <p style="line-height: 30px;font-size: 17px;">放射科医师，神经科医师，神经放射学家和研究人员使用纽卡尔智能诊疗系统来获得客观，有价值的，精准的大脑定量数据，以帮助他们进行临床诊断，疾病进展监测及治疗评估。大量的研究和临床实践表明，脑结构的数据对于阿尔茨海默症和其他类型的痴呆，帕金森病，创伤性脑损伤（TBI），多发性硬化，癫痫，精神性疾病以及脑发育的评估都有着重要意义。</p>
+        </div>
+        <span class="gap10"></span>
+        <h1 class="question">纽卡尔智能诊疗系统提供的诊断报告</h1>
+        <div class="accordion-content answer" style="display: none;">
+          <p style="line-height: 30px;font-size: 17px;">●   大脑萎缩诊断报告（阿尔茨海默症及其他认知障碍的诊断）<br>
+                    ●   海马体积报告（阿尔茨海默症及其他认知障碍的诊断）<br>
+                    ●   大脑皮层体积报告（用于多种神经退行性疾病的诊断及疗效判断）<br>
+                    ●   基底节区报告（帕金森病及运动异常）<br>
+                    ●   大脑发育报告 （儿童生长发育） <br>
+                    ●   白质异常信号区诊断（用于多发性硬化，创伤性脑病的诊断）<br>
+                    ●   PET 脑形态报告 </p>
+        </div>
+        <span class="gap10"></span>
+        <h1 class="question">医生需要提供的数据</h1>
+        <div class="accordion-content answer" style="">
+          <p style="line-height: 30px;font-size: 17px;">放射科医生和神经科医生只需要上传影像学数据，其他一切都会交于纽卡尔智能诊疗系统系统。<br>
+                 1.  T1 脑结构像 （具体请参考建议扫描序列)   <br>
+                 2.  相关的临床信息 （年龄，性别，体重，身高等）   </p>
+        </div>
+        <span class="gap10"></span>
+        <h1 class="question">纽卡尔智能诊疗系统的参考值</h1>
+        <div class="accordion-content answer" style="display: none;">
+          <p style="line-height: 30px;font-size: 17px;">纽卡尔智能诊疗系统参考的大脑结构数据来源于中国华西医院的标准人群大脑影像学数据库，能给中国患者提供最全面，最特异的诊断意见。 </p>
+        </div>
+        <span class="gap10"></span>
+     
+        <h1 class="question open">纽卡尔智能诊疗的人工智能系统</h1>
+        <div class="accordion-content answer" style="display: block;">
+          <p style="line-height: 30px;font-size: 17px;">纽卡尔智能诊疗系统独有的人工智能系统通过深度学习海量影像学数据，从而判断病人患AD 和PD的几率。</p>
+        </div>
+        <span class="gap10" style="border-radius: 0px;"></span>
+        </aside>
+    </div>
+    <div class="col-md-12"></div>
+  </div>
+</div>          
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
+
+
+
+
+<!-- footer -->
+<div class="footer">
+	<div class="container">
+        <h2>与我们联系</h2>
+        <br></br>
+        <h1 align = 'center'>neuroquer@126.com</h1>
+		<p class="copy-right">Copyright &copy; 2018.纽卡尔 All rights reserved.</p>
+	</div>
+</div>
+<!-- //footer -->
+
+
+<!-- <script type="application/javascript">
+    $(document).ready(function () {
+        scrolltotop.controlHTML = "<div class='go-top'><img src='images/go-top.svg'></div>";
+        scrolltotop.init()
+    })
+</script> -->
+
+</a></body></html>

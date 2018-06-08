@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<!-- //js -->
+<!--animate-->
+<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+<script src="js/wow.min.js"></script>
+	<script>
+		 new WOW().init();
+	</script>
+<!--//end-animate-->
+<link href='https://fonts.googleapis.com/css?family=Viga' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<script src="js/responsiveslides.min.js"></script>
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+
+</head>
+<body>
+<!--header-->
+<!-- header -->
+	<div class="header wow zoomIn" data-wow-duration="1.5s" data-wow-delay="0.3s">
+		<div class="container">
+			<div class="logo">
+				<h1><a href="index.html">纽卡尔<span>专业的诊疗平台</span></a></h1>
+			</div>
+			<div class="header-left">
+				<nav class="navbar navbar-default">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+					  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					  </button>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+						<div class="header-right search">
+							<form action="#" method="post">
+								<input type="search" name="Search" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required="">
+								<input type="submit" value=" ">
+							</form>
+						</div>
+						<nav class="link-effect-9" id="link-effect-9">
+							<ul class="nav navbar-nav">
+								<li class="active"><a class="hvr-bounce-to-bottom" href="index.html">主页</a></li>
+								<!-- <li><a href="" class="hvr-bounce-to-bottom">云服务</a></li> -->
+								<li><a href="workflow.html" class="hvr-bounce-to-bottom">工作流程</a></li>
+								<!-- <li><a href="gallery.html" class="hvr-bounce-to-bottom">报告</a></li> -->
+								<li><a href="faq.html" class="hvr-bounce-to-bottom">FAQ</a></li>
+								<li><a href="report.html" class="hvr-bounce-to-bottom">详细报告单</a></li>
+								<li><a href="login.html" class="hvr-bounce-to-bottom" align = 'right'>登录云平台</a></li>
+								<!--<li><a href="contact.html" class="hvr-bounce-to-bottom">Contact</a></li>-->
+							</ul>
+						</nav>
+					</div>
+					<!-- /.navbar-collapse -->
+				</nav>
+			</div>
+		</div>
+	</div>
+<!-- //header -->
+<!-- banner -->
+<div class="banner">
+	<div class="container">
+		<div class="banner-info">
+			<div class="col-md-7 banner-left wow flipInY" data-wow-duration="1.5s" data-wow-delay="0s">
+				<h3><span> 纽卡尔 </span>  阿尔兹海默症诊疗平台<span></span></h3>
+
+				<!--<p>Sed ut perspiciatis unde omnis.</p>-->
+				<a class="hvr-outline-out scroll" href="#about">了解更多</a>
+			</div>
+			<!--<div class="col-md-5 banner-right wow flipInY" data-wow-duration="1.5s" data-wow-delay="0s">-->
+					<!--<div class="ban-icon ban-col1">-->
+						<!--<img src="images/icon1.png" alt="" />-->
+					<!--</div>-->
+					<!--<div class="ban-icon ban-col2">-->
+						<!--<img src="images/icon2.png" alt="" />-->
+					<!--</div>-->
+					<!--<div class="ban-icon3">-->
+					<!--<img src="images/icon3.png" alt="" />-->
+					<!--</div>-->
+				<!--<div class="clearfix"></div>-->
+			<!--</div>-->
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!-- //banner -->
+<!-- banner-bottom -->
+<div id="about" class="banner-bottom wow bounceInUp" data-wow-duration="1s" data-wow-delay="0s">
+	<div class="container">
+		<h3>关于我们</h3>
+		<p class="para1">我们是一家专业的阿尔兹海默症诊疗平台.</p>
+		<div class="col-md-4 bottom-grid multi-gd-text">
+			<a href="gallery.html"><img src="images/pic6.jpg" alt=" "/></a>
+		</div>
+		<div class="col-md-4 bottom-grid mar-pad">
+				<script>
+						// You can also use "$(window).load(function() {"
+						$(function () {
+						 // Slideshow 4
+						$("#slider3").responsiveSlides({
+							auto: true,
+							pager: true,
+							nav: false,
+							speed: 500,
+							namespace: "callbacks",
+							before: function () {
+						$('.events').append("<li>before event fired.</li>");
+						},
+						after: function () {
+							$('.events').append("<li>after event fired.</li>");
+							}
+							});
+						});
+				</script>
+			<div  id="top" class="callbacks_container">
+				<ul class="rslides" id="slider3">
+					<li>
+						<h4>深度学习智能诊疗</h4>
+						<p>通过与功能MRI影像结合，将结构MRI 显示的全脑体素、皮质厚度以及海马体形状体积特征输入深度卷积网络入口，通过算法的深度学习，提取到的特征再输入分类器中，就完成了 AD/MCI的诊断 </p>
+					</li>
+					<li>
+						<h4>分布式云计算</h4>
+						<p>我们的云平台采用分布式的架构方式，合理
+							利用了集群的运算优势，将计算资源按需分配给用户，使集群的运算时间大幅度减少，
+							保证了系统对用户影响的实时分析</p>
+					</li>
+					<li>
+						<h4>医学影像专利</h4>
+						<p>系统建设依靠于基于深度学习的磁共振影像特征提取及分类方法，提高磁共振成像信噪比的方法及其系统等10多项专利，为系统诊断方法的科学性和准确性提供理论支撑</p>
+					</li>
+					<li>
+						<h4>云pacs系统</h4>
+						<p>借助于华西医院放射科3万例AD患者影像资源作为训练模板，利用云pacs系统搭建广域影像资源共享平台，同时借助于核心技术的三分类识别优势，以及诊疗系统的随访功能，纽卡尔平台将给国内长期受阿尔兹海默症困扰的老年群体带来福音。</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-4 bottom-grid multi-gd-text">
+			<a href="gallery.html"><img src="images/pic7.jpg" alt=" "/></a>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+<!-- //banner-bottom -->
+<!-- services -->
+<div class="main_ser">
+	<div class="container">
+		<div class="col-md-7 main_ser_one wow zoomIn" data-wow-duration="1.5s" data-wow-delay="0.1s">
+			<h3>技术路线</h3>
+			<p> 纽卡尔是一个基于中国人大脑模型数据库，结合云计算和人工智能核心技术，精准评估大脑结构的影像学分析诊断平台。 </p>
+			<div class="cont-grids">
+				<div class="col-sm-6 cont-grid-one">
+					<div class="cont-grid-left wel-grid">
+						<div class="btm-clr4">
+							<figure class="icon">
+								<img src="images/icon1.png" alt=" " />
+							</figure>
+						</div>
+					</div>
+					<div class="cont-grid-right">
+						<h4>预处理模块</h4>
+						<p> 首先是部署在医院的图像预处理设备。这一设备可以与医院的PACS 系统直接通信，访问相应的MRI图像。设备将利用自身所带的算法，将庞大的原始MRI图像进行压缩，并且完成滤波、配准和标准化的一系列 图像预处理过程。最后将处理好的较小的图像上传至本公司的中央服务 器进行诊断。 </p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="col-sm-6 cont-grid-one">
+					<div class="cont-grid-left wel-grid">
+						<div class="btm-clr4">
+							<figure class="icon">
+								<img src="images/icon2.png" alt=" " />
+							</figure>
+						</div>
+					</div>
+					<div class="cont-grid-right">
+						<h4>神经网络诊断模块</h4>
+						<p>本公司的服务器将配备GPU或TPU进行神经网络计算，加速诊断过程。
+							服务器可以在数秒内将诊断结果返回给患者或医院。
+							得益于现代半导体工业的发展，人们逐步将深度学习的实现从软件层
+							面转移至更高效的硬件层面。本公司也拟在未来使用自己的机器视觉芯片，直接在医 院终端处理识别MRI图像，以实现更高效的诊断，</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="col-sm-6 cont-grid-one yes_magr">
+					<div class="cont-grid-left wel-grid">
+						<div class="btm-clr4">
+							<figure class="icon">
+								<img src="images/icon3.png" alt=" " />
+							</figure>
+						</div>
+					</div>
+					<div class="cont-grid-right">
+						<h4>图像输入分类器</h4>
+						<p>纽卡尔提出了一种基于深度学习的磁共振影响特征提取方法，
+							有效解决了传统的磁共振图像分类过程中需要人工选择特征输入致使分类精度不高的问题，
+							其通过多层卷积神经网络的非线性映射，
+							自动得到高度可分特征/特征组合用于分类，并且可以不断优化网络结构得 到更好的分类效果。</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="col-sm-6 cont-grid-one yes_magr">
+					<div class="cont-grid-left wel-grid">
+						<!--<div class="btm-clr4">-->
+							<!--<figure class="icon">-->
+								<!--<img src="images/icon1.png" alt=" " />-->
+							<!--</figure>-->
+						<!--</div>-->
+					</div>
+					<!--<div class="cont-grid-right">-->
+						<!--<h4>Voluptatem</h4>-->
+						<!--<p> Nemo enim ipsam voluptatem quia voluptas sit aspernatur.</p>-->
+					<!--</div>-->
+					<!--<div class="clearfix"></div>-->
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="col-md-5 main_ser_two wow zoomIn" data-wow-duration="1.5s" data-wow-delay="0.1s">
+			<img class="img-responsive" src="images/pic3.jpg" alt=" "/>
+			<h4>专业的医学影像诊疗平台</h4>
+				<!--<div class="accordion">-->
+							<!--<div class="accordion-section">-->
+								<!--<a class="accordion-section-title" href="#accordion-1">Voluptatem Accusantium <i class="glyphicon glyphicon-chevron-down"></i><div class="clearfix"></div>-->
+								<!--</a>-->
+								<!--<div id="accordion-1" class="accordion-section-content">-->
+									<!--<p>Mauris interdum fringilla augue vitae tincidunt. Curabitur vitae tortor id eros euismod ultrices.</p>-->
+								<!--</div>-->
+							<!--</div>-->
+
+							<!--<div class="accordion-section">-->
+								<!--<a class="accordion-section-title" href="#accordion-2">Interdum Fringilla<i class="glyphicon glyphicon-chevron-down"></i><div class="clearfix"></div>-->
+								<!--</a>-->
+								<!--<div id="accordion-2" class="accordion-section-content">-->
+									<!--<p>Mauris interdum fringilla augue vitae tincidunt. Curabitur vitae tortor id eros euismod ultrices.</p>-->
+								<!--</div>-->
+							<!--</div>-->
+
+							<!--<div class="accordion-section">-->
+								<!--<a class="accordion-section-title" href="#accordion-3">Curabitur Vitae <i class="glyphicon glyphicon-chevron-down"></i><div class="clearfix"></div>-->
+								<!--</a>-->
+								<!--<div id="accordion-3" class="accordion-section-content">-->
+									<!--<p>Mauris interdum fringilla augue vitae tincidunt. Curabitur vitae tortor id eros euismod ultrices.</p>-->
+								<!--</div>-->
+							<!--</div>-->
+
+
+				<!--</div>-->
+				<script>
+							jQuery(document).ready(function() {
+								function close_accordion_section() {
+									jQuery('.accordion .accordion-section-title').removeClass('active');
+									jQuery('.accordion .accordion-section-content').slideUp(300).removeClass('open');
+								}
+
+								jQuery('.accordion-section-title').click(function(e) {
+									// Grab current anchor value
+									var currentAttrValue = jQuery(this).attr('href');
+
+									if(jQuery(e.target).is('.active')) {
+										close_accordion_section();
+									}else {
+										close_accordion_section();
+
+										// Add active class to section title
+										jQuery(this).addClass('active');
+										// Open up the hidden content panel
+										jQuery('.accordion ' + currentAttrValue).slideDown(300).addClass('open');
+									}
+
+									e.preventDefault();
+								});
+							});
+				</script>
+
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+<!-- //services -->
+<!-- treatments -->
+<div class="treatments">
+	<h3>我们的竞争力</h3>
+	<p class="para1">我们通过基于深度学习技术的人工智能磁共振影像方法，在体检时进行早期筛查发现早期患者，继而采取行之有效的干预措施，防止老年患者步入无独立生活能力的晚期阶段。</p>
+	<div class="col-md-4 treat-grids treat-pad wow bounceInUp" data-wow-duration="1.5s" data-wow-delay="0s">
+		<h5>服务对象</h5>
+		<ul>
+			<li><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span><a href="#">体检中心</a></li>
+			<li><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span><a href="#">医院集体</a></li>
+			<li><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span><a href="#">个人用户</a></li>
+			<li><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span><a href="#">科研中心</a></li>
+		</ul>
+	</div>
+	<div class="col-md-4 treat-grids grid wow bounceInUp" data-wow-duration="1.5s" data-wow-delay="0.1s">	
+		<figure class="effect-apollo">
+			<img src="images/show1.jpg" alt=" "/>
+				<figcaption>
+					<p></p>
+				</figcaption>			
+		</figure>
+	</div>
+	<div class="col-md-4 treat-grids treat-pad wow bounceInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
+		<h5>技术优势</h5>
+			<ul>
+				<li><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span><a href="#">多功能的深度学习三分类识别</a></li>
+				<li><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span><a href="#">华西磁共振研究中心科研资源</a></li>
+				<li><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span><a href="#">医学影像特征提取专利</a></li>
+				<li><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span><a href="#">华西MRI影像库</a></li>
+			</ul>
+	</div>
+	<div class="col-md-4 treat-grids grid wow bounceInUp" data-wow-duration="1.5s" data-wow-delay="0.3s">	
+		<figure class="effect-apollo">
+			<img src="images/show2.jpg" alt=" "/>
+				<figcaption>
+					<p>先进诊疗</p>
+				</figcaption>			
+		</figure>
+	</div>
+	<div class="col-md-4 treat-grids treat-head treat_mar wow bounceInUp" data-wow-duration="1.5s" data-wow-delay="0.4s">
+		<h4>竞品分析</h4>
+		<p>现有的用基因诊断的方法诊断阿兹海默症的准确性高，也能从基因层面提供较为可靠的治疗方案，但操作过程繁杂，工作量大，花费高。</p>
+		<p>用量表基于量表实现AD 诊断简单易行，但是主观性较强，患者的受教育 程度、文化背景以及医生的个人主观习惯都会影响诊断的可靠性。 </p>
+	</div>
+	<div class="col-md-4 treat-grids grid treat_mar wow bounceInUp" data-wow-duration="1.5s" data-wow-delay="0.5s">
+		<figure class="effect-apollo">
+			<img src="images/show3.jpg" alt=" "/>
+				<figcaption>
+					<p>先进诊疗</p>
+				</figcaption>			
+		</figure>
+	</div>
+	<div class="clearfix"></div>
+</div>
+<!-- //treatments -->
+
+<!-- footer -->
+<div class="footer">
+		<div class="container">
+			<h2>与我们联系</h2>
+			<br></br>
+			<style>
+				h1{color:white;}
+			</style>
+			<h1 align = 'center' >neuroquer@126.com</h1>
+			<p class="copy-right">Copyright &copy; 2018.纽卡尔 All rights reserved.</p>
+		</div>
+	</div>
+	<!-- //footer -->
+	
+
+<!-- smooth scrolling -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+		/*
+			var defaults = {
+			containerID: 'toTop', // fading element id
+			containerHoverID: 'toTopHover', // fading element hover id
+			scrollSpeed: 1200,
+			easingType: 'linear' 
+			};
+		*/								
+		$().UItoTop({ easingType: 'easeOutQuart' });
+		});
+	</script>
+	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<!-- //smooth scrolling -->
+<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+</body>
+</html>
